@@ -1,0 +1,196 @@
+/* Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #0f171e;
+  color: white;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 20px 50px;
+  background: #1f2a38;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00a8e1;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #00a8e1;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 50px;
+  background: url("https://via.placeholder.com/1200x400/000000/00a8e1?text=Jayanth+Portfolio") no-repeat center;
+  background-size: cover;
+}
+
+.content h4 {
+  font-size: 20px;
+  color: #aaa;
+}
+
+.content h1 {
+  font-size: 40px;
+  margin: 10px 0;
+  color: #00a8e1;
+}
+
+.content h1 span {
+  color: #ffffff;
+}
+
+.content h3 {
+  font-size: 24px;
+  color: #00d8ff;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #00a8e1;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #007ca8;
+}
+
+/* Photo */
+.photo img {
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid #00a8e1;
+}
+
+/* Carousel / Project Cards */
+.carousel-section {
+  padding: 2rem 3rem;
+}
+
+.carousel-section h2 {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #00a8e1;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  min-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card p {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #1f2a38;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: #00a8e1;
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+}
+
+.modal-content li {
+  margin: 0.5rem 0;
+  color: #ddd;
+}
+
+.modal-content p {
+  color: #ddd;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jayanth | Portfolio</title>
+  <link rel="stylesheet" href="stylie.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <div class="logo">SAMPATH</div>
+      <ul>
+        <li><a href="#" onclick="openModal('about')">About</a></li>
+        <li><a href="#" onclick="openModal('skills')">Skills</a></li>
+        <li><a href="#" onclick="openModal('projects')">Projects</a></li>
+        <li><a href="#" onclick="openModal('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="content">
+      <h4>Hello,</h4>
+      <h1>I'm <span>SAMPATH</span></h1>
+      <h3>UI/UX Designer and Full Stack Engineer</h3>
+      <p>From India</p>
+      <button class="btn" onclick="openModal('contact')">Hire Me</button>
+    </div>
+    <div class="photo">
+      <img src="SAMPATH.jpg" alt="Your Photo" />
+    </div>
+  </section>
+
+  <!-- Projects Section (Carousel Style) -->
+  <section class="carousel-section">
+    <h2>My Projects</h2>
+    <div class="carousel">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x170" alt="Project 1">
+        <p>Zomato Review Analysis</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x170" alt="Project 2">
+        <p>Portfolio Website</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x170" alt="Project 3">
+        <p>Weather App</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="about" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('about')">&times;</span>
+      <h2>About Me</h2>
+      <p>I am a passionate UI/UX Designer with experience in modern, user-friendly interfaces. Also, I am a Machine Learning engineer with expertise in supervised and unsupervised learning.</p>
+    </div>
+  </div>
+
+  <div id="skills" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('skills')">&times;</span>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>Machine Learning</li>
+        <li>Neural Networks</li>
+        <li>Deep Learning</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="projects" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('projects')">&times;</span>
+      <h2>Projects</h2>
+      <p>I did a project on Zomato restaurant reviews and metadata using clustering and EDA.</p>
+    </div>
+  </div>
+
+  <div id="contact" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contact')">&times;</span>
+      <h2>Contact Me</h2>
+      <p>Email:saisampathdangeti.67@gmail.com</p>
+      <p>Phone: +91 8555831213</p>
+    </div>
+  </div>
+
+  <!-- Script for Modals -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
